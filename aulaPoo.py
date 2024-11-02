@@ -1,3 +1,7 @@
+
+# oque é self : ele chama a instancia do obj a partir da classe 
+# __init__ é contrutor formaa
+
 # Exemplos
 
 # my_name = 'Dayvson'.upper()
@@ -67,41 +71,81 @@
 
 # exemplo 3 
 
-class Business:
+# class Business:
 
-    def __init__(self):
-        self.employers = []
+#     def __init__(self):
+#         self.employers = []
 
-    def add_employers(self):
-        employer = {
-            "name": input("Digite o nome do funcionario :"),
-            "role": input("Digite o seu  cargo :"),
-            "salary": float(input("Digite o salario que vai receber :"))
-        }
-
-
-        self.employers.append(employer)
-        print("Bem Vindo a Empresa VASP")
+#     def add_employers(self):
+#         employer = {
+#             "name": input("Digite o nome do funcionario :"),
+#             "role": input("Digite o seu  cargo :"),
+#             "salary": float(input("Digite o salario que vai receber :"))
+#         }
 
 
-    def list_employers(self):
-        for func in self.employers:
-            print(func["name"])
-            print(func["role"])
-            print(func["salary"])
-
-    def remove_employers(self):
-        name_remove = input("Digite o nome do fucionario que deseja desligar da empresa :")
-        for func in self.employers:
-            if func["name"] == name_remove:
-                self.employers.remove(func)
-                print("Funcionario Desligado da Empresa")
-
-vasp =  Business()
-
-vasp.add_employers()
-vasp.list_employers()
-vasp.remove_employers()
+#         self.employers.append(employer)
+#         print("Bem Vindo a Empresa VASP")
 
 
+#     def list_employers(self):
+#         for func in self.employers:
+#             print(func["name"])
+#             print(func["role"])
+#             print(func["salary"])
+
+#     def remove_employers(self):
+#         name_remove = input("Digite o nome do fucionario que deseja desligar da empresa :")
+#         for func in self.employers:
+#             if func["name"] == name_remove:
+#                 self.employers.remove(func)
+#                 print("Funcionario Desligado da Empresa")
+
+# vasp =  Business()
+
+# vasp.add_employers()
+# vasp.list_employers()
+# vasp.remove_employers()
+
+# exercicio 1
         
+# class Forma:
+#     def __init__(self,nome):
+#         self.nome = nome
+        
+
+# class Circulo(Forma):
+#     def __init__(self, raio):
+#         self.raio = raio
+
+#     def area(self):
+#         return 3.14 * self.raio ** 2  
+
+#     def perimetro(self):
+#         return 2 * 3.14 * self.raio  
+
+# # o super() é para pegar da class principal
+# class Retangulo(Forma):
+#     def __init__(self, nome,largura , altura):
+#         self.largura = largura
+#         self.altura = altura
+#         super().__init__(nome)
+
+#     def area(self):
+#         return self.largura * self.altura
+
+#     def perimetro(self):
+#         return 2 * (self.largura + self.altura)
+
+
+
+# meu_circulo = Circulo(5)
+# print(round(meu_circulo.area(),2))
+# print(round(meu_circulo.perimetro()))
+
+# meu_retangulo = Retangulo("retangulo",4,6)
+# print(round(meu_retangulo.area(),2))
+# print(round(meu_retangulo.perimetro()))
+
+
+
