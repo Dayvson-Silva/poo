@@ -23,14 +23,14 @@ class Conta:
     def exibir_saldo(self):
         print(f"Saldo atual de {self.titular}: R${self.saldo:.2f}")
 
-# Criando uma conta a partir dos dados do usuário
+
 def criar_conta():
     numero_conta = int(input("Digite o número da conta: "))
     titular = input("Digite o nome do titular: ")
     saldo = float(input("Digite o saldo inicial (opcional): "))
     return Conta(numero_conta, titular, saldo)
 
-# Menu de opções
+
 def menu():
     print("\n--- Menu ---")
     print("1. Depositar")
@@ -40,16 +40,15 @@ def menu():
     opcao = int(input("Escolha uma opção: "))
     return opcao
 
-# Programa principal
 if __name__ == "__main__":
-    conta = criar_conta()
+    conta = Conta()
 
     while True:
         opcao = menu()
 
         if opcao == 1:
             valor = float(input("Digite o valor a ser depositado: "))
-            conta.depositar(valor)
+            conta.depositar
         elif opcao == 2:
             valor = float(input("Digite o valor a ser sacado: "))
             conta.sacar(valor)
